@@ -17,6 +17,12 @@ label start:
     show any normal
     jeck "우왕"
 
-    jeck "한번 클릭하면 이렇게도 할 수 있음"
+    jeck "여기서 0.5초 기다리고{w=0.5} 여기서는 누를 때 까지 기다릴거야 {w}됐당"
+
+    jeck "자동으로 여기까지 진입 {nw}"
+
+    jeck "자동으로 여기까지 진입 후에{fast} 이런 글을 남길거임"
+
+    jeck "대사록 체크용 더미"
 
     return
