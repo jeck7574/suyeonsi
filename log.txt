@@ -1,4 +1,4 @@
-Sat Apr  8 16:50:21 2023
+Sat Apr  8 18:24:18 2023
 Windows-10-10.0.19045
 Ren'Py 8.0.3.22090809
  
@@ -11,7 +11,7 @@ Loading script took 0.12s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\user\\Downloads\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.05s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -30,7 +30,7 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.03s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -45,12 +45,27 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 2060/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 516.94'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1369, 770) drawable=(1369, 770)
+Screen sizes: virtual=(1920, 1080) physical=(1367, 769) drawable=(1367, 769)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+
+Full traceback:
+  File "game/script.rpy", line 27, in script
+    show jeck sad (0.5)
+  File "C:\Users\user\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\user\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\user\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\user\Downloads\renpy-8.0.3-sdk\renpy\display\image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\user\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 397, in _duplicate
+    args.extraneous()
+  File "C:\Users\user\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'jeck sad' does not accept attributes '(0.5)'.
+
+While running game code:
+  File "game/script.rpy", line 27, in script
+    show jeck sad (0.5)
+Exception: Image 'jeck sad' does not accept attributes '(0.5)'.

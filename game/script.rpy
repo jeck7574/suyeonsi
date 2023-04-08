@@ -8,17 +8,23 @@ define e = Character('아이린', color="#c8ffc8")
 
 define jeck = Character('젝', color="#FFFFFF")
 
-image any normal = "Character/any.jpg"
+image jeck normal = "Character/any.jpg"
+
+image jeck sad = im.MatrixColor(
+    "Character/any.jpg",
+    im.matrix.tint(0.45, 0.45, 0.75)
+    * im.matrix.brightness(-0.07))
 
 
 # 여기에서부터 게임이 시작합니다.
 label start:
 
-    show any normal
+    show jeck normal
     jeck "우왕"
 
     jeck "여기서 0.5초 기다리고{w=0.5} 여기서는 누를 때 까지 기다릴거야 {w}됐당"
 
+    show jeck sad
     jeck "자동으로 여기까지 진입 {nw}"
 
     jeck "자동으로 여기까지 진입 후에{fast} 이런 글을 남길거임"
